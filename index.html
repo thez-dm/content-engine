@@ -210,7 +210,7 @@ footer{padding:60px 0 90px;border-top:1px solid var(--line-soft);font-size:12px;
     <h1 class="rv" style="margin-top:14px">The content engine,<br><em>running.</em></h1>
     <p class="lede rv">One repository holds the voice, the product truth and the craft rules. Scheduled tasks read it, draft against it, and push finished work to three surfaces in two languages. What follows is that system, animated — signal moving from foundation to publication.</p>
     <div class="herometa rv">
-      <span class="pill live"><i></i><b>6</b>&nbsp;scheduled tasks</span>
+      <span class="pill live"><i></i><b>8</b>&nbsp;scheduled tasks</span>
       <span class="pill"><b>3</b> surfaces</span>
       <span class="pill"><b>2</b> languages</span>
       <span class="pill"><b>28</b> articles published</span>
@@ -277,7 +277,7 @@ footer{padding:60px 0 90px;border-top:1px solid var(--line-soft);font-size:12px;
   <div class="wrap">
     <div class="shead rv">
       <div class="kicker">The rhythm</div>
-      <h2>Six tasks that run without being asked</h2>
+      <h2>Eight tasks that run without being asked</h2>
       <p class="lede">Each one reads its prompt from a version-controlled file in the repo. Edit the file, commit, and the next run behaves differently — nothing is pasted into a settings panel.</p>
     </div>
     <div class="tasks rv" id="tasks"></div>
@@ -421,7 +421,7 @@ footer{padding:60px 0 90px;border-top:1px solid var(--line-soft);font-size:12px;
 
 <footer>
   <div class="wrap">
-    moodcase content engine · system map · recruiter edition v3 · 10 August 2026<br>
+    moodcase content engine · system map · recruiter edition v4 · 10 August 2026<br>
     Article count read from the live moodcase.io sitemaps (14 EN + 14 DE); LinkedIn volume from the Buffer publishing log; Instagram status from the editorial tracker; asset counts from the live libraries, archives excluded. <em style="font-style:normal">Published</em> means live on the site. <em style="font-style:normal">Drafted</em> means written, approved and queued in Buffer. Snapshot — regenerate to refresh.
   </div>
 </footer>
@@ -456,8 +456,10 @@ footer{padding:60px 0 90px;border-top:1px solid var(--line-soft);font-size:12px;
   /* ---------------- scheduled tasks ---------------- */
   const TASKS=[
     {cad:'Weekly',when:'Sunday · 18:30',nm:'Blog — Weekly Insights (EN + DE)',ds:'Writes a full Insights article end to end in both languages against the category skill and the AEO reference, then delivers both into Framer as drafts through the MCP.',sf:'Blog',live:true},
+    {cad:'Weekly',when:'Sunday · 19:00',nm:'LinkedIn — weekly batch',ds:'Drafts five moodcase-page posts and three founder posts from the month’s plan — full copy, visual direction, and a decision on whether the post earned a CTA.',sf:'LinkedIn',live:true},
     {cad:'Weekly',when:'Sunday · 19:30',nm:'Instagram — weekly guardrail',ds:'Read-only. Verifies both scheduled months in Buffer and flags anything that needs a fix session. Never writes.',sf:'Instagram',live:true},
     {cad:'Monthly',when:'1st · 08:00',nm:'Instagram — monthly planner',ds:'Schedules the whole of next month in Buffer, so two months are always visible ahead.',sf:'Instagram',live:true},
+    {cad:'Monthly',when:'1st Sunday · 18:00',nm:'LinkedIn — monthly planner',ds:'Builds the four-week plan — 20 moodcase-page posts and 12 founder posts — reading published articles for repurposing and past posts to avoid repeating itself.',sf:'LinkedIn',live:true},
     {cad:'Monthly',when:'1st Sunday · 18:30',nm:'Blog — monthly planner',ds:'Sequences the month’s articles against the slug registry and writes the plan into the tracker.',sf:'Blog',live:true},
     {cad:'Bi-weekly',when:'1st & 3rd Mon · 10:00',nm:'Instagram — quote-card batch',ds:'Renders voice-anchor cards and commits them to the public cards repo by API, so each URL is live at staging time.',sf:'Instagram',live:true},
     {cad:'Bi-monthly',when:'8th & 22nd · 09:00',nm:'Visual metadata backfill',ds:'Writes XMP and IPTC metadata into untagged library images and patches missing photographer credits.',sf:'Asset library',live:true}
@@ -496,8 +498,8 @@ footer{padding:60px 0 90px;border-top:1px solid var(--line-soft);font-size:12px;
     {c:1,y:250,t:'Surface skills',s:'blog · IG · LinkedIn ×2 · DE',n:'9'},
     {c:1,y:380,t:'Format skills',s:'AP · VA · PX · MH',n:'4'},
 
-    {c:2,y:185,t:'Planners',s:'monthly · blog + Instagram',n:'2'},
-    {c:2,y:315,t:'Batchers',s:'weekly · Insights + guardrail',n:'2'},
+    {c:2,y:185,t:'Planners',s:'monthly · blog · IG · LinkedIn',n:'3'},
+    {c:2,y:315,t:'Batchers',s:'weekly · Insights · LinkedIn · guardrail',n:'3'},
     {c:2,y:445,t:'Maintenance',s:'cards · image metadata',n:'2'},
 
     {c:3,y:315,t:'Founder gate',s:'approve · proof · publish',n:'',gate:true},
